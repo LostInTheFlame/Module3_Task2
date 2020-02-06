@@ -8,12 +8,13 @@ namespace Task2
         {
             Console.Write("Введите натуральное число N: ");
             string n = Console.ReadLine();
+
             if (int.TryParse(n, out int N))
             {
                 if (N >= 0)
                 {
-                    Console.WriteLine($"\nЧётные натуральные числа от 0 до {N}:");
-                    for (int i = 1; i <= N; i++)
+                    Console.WriteLine($"\nПервые чётные натуральные числа:");
+                    for (int i = 1; i <= N*2; i++)
                     {
                         if (i % 2 == 0)
                         {
@@ -21,9 +22,15 @@ namespace Task2
                         }
                     }
                 }
-                else Console.WriteLine("Натуральное число не может быть отрицательным.");
+                else
+                {
+                    Console.WriteLine("Натуральное число не может быть отрицательным.");
+                }
             }
-            else Console.WriteLine("Значение введено неверно.");
+            else
+            {
+                Console.WriteLine("Значение введено неверно.");
+            }
             Console.ReadKey(true);
         }
     }
