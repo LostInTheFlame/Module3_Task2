@@ -11,25 +11,22 @@ namespace Task2
 
             if (int.TryParse(n, out int N))
             {
-                if (N >= 0)
+                if (N > 0)
                 {
-                    Console.WriteLine($"\nПервые чётные натуральные числа:");
-                    for (int i = 1; i <= N*2; i++)
+                    Console.WriteLine($"\nЧётные натуральные числа:");
+                    for (int i = 2; i <= N * 2; i += 2)
                     {
-                        if (i % 2 == 0)
-                        {
-                            Console.WriteLine($"{i}");
-                        }
+                        Console.WriteLine($"{i}");
                     }
                 }
                 else
                 {
-                    Console.WriteLine("Натуральное число не может быть отрицательным.");
+                    Console.WriteLine("\nЧётных натуральных чисел нет.");
                 }
             }
             else
             {
-                Console.WriteLine("Значение введено неверно.");
+                Console.WriteLine("\nЗначение введено неверно.");
             }
             Console.ReadKey(true);
         }
